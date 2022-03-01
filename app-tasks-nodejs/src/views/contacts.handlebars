@@ -1,0 +1,50 @@
+
+{{!-- Contact Form Section --}}
+<section class="main-container">
+    <h1 class="main-title">Contacts</h1>
+    <hr class="hr">
+
+    <div class="card-form">
+        <section class="form-section section box-shadow" id="formSection">
+            <form class="contact-form">
+                <h2>Send us your request</h2>
+
+                <input type="text" name="neme" placeholder="Your Name"
+                    title="El Nombre solo acepta Letras y espacion en blanco" pattern="^[A-Za-zÑñÄäÖöÜüÁáÉéÍíÓóÚú\s]+$"
+                    required>
+
+                <input type="text" name="lastneme" placeholder="Your Last Name"
+                    title="El lastneme solo acepta Letras y espacion en blanco" pattern="^[A-Za-zÑñÄäÖöÜüÁáÉéÍíÓóÚú\s]+$"
+                    required>
+
+                <input type="enail" name="email" placeholder="Your Email" title="Email incorecto"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+
+                <input type="text" name="subject" placeholder="Write Your Request" title="The subject is required" required>
+
+                <textarea name="comments" id="" cols="30" rows="5" placeholder="Write Your Comment"
+                    title="Your comment can not be loger than 255 catecteres" data-pattern="^.{1,255}$" required></textarea>
+
+                <div class="contact-form-loader none">
+                    <img src="./assets/rings.svg" alt="Loading...">
+                </div>
+
+                <input type="submit" value="Enviar">
+            </form>
+
+            {{!-- Modal Section --}}
+            {{!-- <article id="thanks" class="modal">
+                <div class="modal-content">
+                    <article class="contact-form-responce">
+                    <h3>
+                        Thank <br>
+                        For your Comment
+                    </h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,18c4,0,5-4,5-4H7C7,14,8,18,12,18z"/><path d="M12,2C6.486,2,2,6.486,2,12c0,5.514,4.486,10,10,10s10-4.486,10-10C22,6.486,17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8 s3.589-8,8-8s8,3.589,8,8S16.411,20,12,20z"/><path d="M13 12l2 .012C15.012 11.55 15.194 11 16 11s.988.55 1 1h2c0-1.206-.799-3-3-3S13 10.794 13 12zM8 11c.806 0 .988.55 1 1h2c0-1.206-.799-3-3-3s-3 1.794-3 3l2 .012C7.012 11.55 7.194 11 8 11z"/></svg>
+                    </article>
+                </div>
+            </article> --}}
+
+    </section>
+    </div>
+</section>

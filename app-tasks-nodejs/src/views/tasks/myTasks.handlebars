@@ -1,0 +1,49 @@
+    {{!-- tasks container section --}}
+    <section class="cards-container">
+        <h2 class="home-title">My Tasks</h2>
+        <hr class="hr">
+        
+         <div class="cards-content">
+            {{!-- Secion del perfil --}}
+            <div class="cards-perfil">
+                <h4 class="">Perfil</h4>
+                <h4>Data:{{data.usermane}}</h4>
+                <a class="btn" href="/tasks/add">Add a new Task</a>
+            </div>
+
+            {{!-- Seccion que pinta las notas --}}
+            <div class="cards-my-section">
+            {{#each tasks}}
+                <div class="my-tasks">
+                        <div class="card-header">
+                            <h4>{{ title}}</h4>
+                        </div>
+
+                        <div class="task-desc">
+                            <p class="p-desc">{{description}}</p>
+                            <p class=""><small>{{done}}</small></p>
+                            <p class=""><small>{{date}}</small></p>
+                        </div>
+
+                    <div class="div-delete">
+                        <a href="/tasks/delete/{{_id}}"  class="btn-delete">Delete</a>
+                    </div>
+                </div>
+
+            {{!-- Renderiza el mensaje cuando no hay Tasks --}}
+            {{else}}
+
+            <div class="wellcome-msg">
+                <div class="card-header">
+                    <h3 class="text-center">Hello {{user.email}}</h3>
+                </div>
+                <div class="">
+                    <h3 class="">No hay Notas ahun</h3>
+                    <a class="btn" href="/tasks/add" class="">Crate One</a>
+                </div>
+            </div>
+            {{/each}}
+            </div>      
+        </d>
+    </section>
+   

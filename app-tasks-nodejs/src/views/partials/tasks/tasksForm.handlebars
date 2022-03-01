@@ -1,0 +1,29 @@
+
+{{!-- Add Tasks Section --}}
+<div class="">
+    <div class="card-singup">
+      <h3 class="card-header text-center">Add a Task</h3>
+
+      <div class="cad-body">
+            <form class="contact-form" action="/tasks/add" method="post">
+            
+              <label class="label" for="title" id="title">Write a Title</label>
+              <input type="text" name="title" value="{{title}}"  placeholder="Title" autofocus/>
+            
+              <label class="label" for="description" id="description">Write an Description</label>
+              <textArea name="description" value="{{description}}"  placeholder="Description" ></textArea>
+           
+
+        
+              <input type="submit" value="Save Task" class="btn">
+         
+        </form>
+      </div>
+        
+</div>
+
+{{!-- <div class="see-all-tasks">
+    <a class="btn" href="/tasks/myTasks"> Ver todas las Tasks</a>
+</div> --}}
+
+</div>

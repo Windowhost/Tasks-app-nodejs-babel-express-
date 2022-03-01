@@ -1,0 +1,18 @@
+{{!-- Archivo que Renderiza la pagina del Home --}}
+{{!-- Atraves de estas dor variable se renderizan en la pagina del home el formulario y la tabla --}}
+
+     <h2 class="main-title">Hallo Tasks Index</h2>
+    <hr class="hr">
+
+    <div class="cards section-card">
+        <div class="card form-card">
+              {{> tasks/tasksForm}}
+        </div>
+        
+        <div class="card table-card">
+            {{> tasks/tasksTable}}
+        </div>
+
+    </div> 
+
+{{!-- Si no hay notas crea una nota --}}    

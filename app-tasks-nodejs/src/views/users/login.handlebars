@@ -1,0 +1,33 @@
+
+{{!-- Mamejadores de errores desde Bootstap --}}
+ {{#each errors}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{text}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+  </button>
+ 
+</div>
+{{/each}} 
+
+{{!-- Login Section --}}
+
+    <div class="card-singup">
+        <div class="card-header">
+            <h3 class="text-center">Acount Login</h3>
+        </div>
+
+        <div class="cad-body">
+            <form class="contact-form" action="/users/login" method="POST">
+                <img src="/assets/task-icon.png" style="width: 30%;" alt="Logo">
+                <input type="email" name="email" placeholder="Email" autofocus required>
+                <input type="password" name="password"  placeholder="Password" required>
+
+                {{!-- <div class="contact-form-loader none">
+                    <img src="./assets/rings.svg" alt="Loading...">
+                </div> --}}
+                <input type="submit" value="Signin">
+
+            </form>
+        </div>
+    </div>

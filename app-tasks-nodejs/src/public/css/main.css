@@ -1,0 +1,579 @@
+/* ***** Custom Properties ***** */
+:root{
+    --first-color: #F04259;
+    --second-color: #F04259;
+    --black-color: #0A0909;
+    --black-sepia-color: #484848;
+    --third-color: #E08EF4;
+    --link-color: #511a5f;
+    --white-color: #FFFDFD;
+    --gray-color: #C4C4C4;
+    --max-width: 1200px;
+    --font:'Raleway', sans-serif;
+    --header-height: 4rem;
+}
+    
+
+/* ***** RESET ***** */
+html{
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a{
+    color: var(--link-color);
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.75;
+}
+
+h1{
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+h3{
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+h4{
+    margin: 0;
+    font-size: 1rem;
+}
+
+h5{
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+img{
+ width: 100%;
+ height: auto;
+}
+
+/* Comon Styles Site */
+.header{
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 100%;    
+    height: var(--header-height);
+    z-index: 999;
+    background: var(--black-sepia-color);
+}
+
+.header > .container{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    width: 95%;
+    margin: 5rem auto 0;
+}
+
+.main-container{
+    margin-bottom: 1rem;
+}
+
+.main-title{
+    padding: .3rem 1rem;
+    width: 170px;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    background: var(--gray-color);
+}
+
+.hr{
+    padding: .1rem;
+    background: var(--gray-color);
+}
+
+.card{
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.title-container{
+    align-self: flex-start;
+}
+
+.menu-btn{
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.menu{
+    position: fixed;
+    flex-direction: column;
+    top: var(--header-height);
+    list-style: none;
+    left: 0;
+    padding-left: 0;
+    padding-bottom: 1rem;
+    margin-top: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    background: var(--black-sepia-color);
+    transition: opacity .7s ease;
+    pointer-events: none;
+}
+
+.btn{
+    display: block;
+    text-align: center;
+    width: 70%;
+    margin: .2rem auto;
+    color: var(--white-color);
+    background-color: var(--third-color);
+    border-radius: 5px;
+}
+
+.menu a{
+    display: block;
+    padding: .5rem;
+    width: 70%;
+    margin: .2rem auto;
+    color: var(--white-color);
+    background-color: var(--third-color);
+    border-radius: 5px;
+}
+
+.menu a:hover{
+   color: var(--black-color);
+}
+
+.drop-angle{
+    width: 10px;
+}
+
+.dropdawn-content-1{
+    position: absolute;
+    left: 25%;
+    top: 1rem;
+    width: 50%;
+    background: var(--black-color);
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+}
+
+.delete-btn{
+    background: red;
+}
+
+.dropdawn-content-1 ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+.dropdawn-content-1 ul a{
+    width: 90%;
+}
+
+.menu-down{
+    display: block;
+}
+
+.menu.is-active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.title-container{
+    padding: .3rem 2.5rem;
+    background: var( --first-color);
+    color: var(--white-color);
+    border-radius: 5px;
+}
+
+.none{
+    display: none;
+}
+
+.footer-section{
+    left: 0;
+    bottom: 0;
+    width: 100vw; 
+}
+
+.f-content{
+    display: flex;
+    flex-direction: column;
+    background: var(--black-sepia-color);
+}
+
+.f-content a {
+    display: block;
+    width: 90%;
+    margin: 1rem auto .1rem;
+    text-align: center;
+    padding: 1rem;
+    background: var(--black-color);
+    border-radius: 5px;
+}
+
+.footer-section :nth-child(3){
+    margin-bottom: .9rem;
+}
+
+.f-content a{
+    color: var(--white-color);
+}
+
+.author{
+    width: 100%;
+    text-align: center;
+    background: var(--black-color)
+}
+.author p {
+    margin: 0;
+    color: var(--white-color);
+}
+
+.t-desc{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-y: scroll;
+    padding: .3rem;
+    background: var(--third-color);
+}
+
+.t-head th{
+    color: var(--white-color);
+}
+
+.btn-delete{
+    display: block;
+    padding: .2rem;
+    background: red;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px ;
+}
+
+/* Estilos des la cartas unicas */
+.cards-container{   
+    margin-top: 5rem;
+    padding: 2rem;
+}
+
+.cards-content {
+ 
+   /* margin-left: 0; */
+   
+}
+
+
+.cards-perfil{
+    margin-bottom: 10px;
+    padding: .5rem;
+    background: rgb(218, 171, 171);
+}
+
+.cards-my-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-tasks{
+    width: 100%;
+    margin: 1rem;
+    background: var(--gray-color);
+}
+
+/* .task-desc{
+    max-height: 200px;
+    overflow-y: scroll;
+} */
+
+.p-desc{
+    padding: .4rem;
+}
+
+.t-title{
+    background: var(--link-color);
+    color: var(--white-color);
+}
+
+.contact-form label{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--black-color);
+}
+
+
+/* Singup form styles */
+
+.card-singup{
+    border: 2px solid black;
+    margin: 4rem auto;
+}
+
+.card-header{
+    text-align: center;
+    background: var(--black-sepia-color);
+}
+
+.text-center{
+    font-size: 36px;
+    padding: .5rem;
+    font-weight: normal;
+    color: var(--white-color);
+}
+
+.cad-body{
+    padding: .8rem;
+    background: var(--black-color);
+}
+
+.cad-body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    background: var(--gray-color);
+    border-radius: 5px;
+}
+
+.cad-body .form-group{
+    width: 80%;
+    margin: .5rem;
+}
+
+a.down i{
+    display: inline;
+}
+
+@media screen and (min-width: 720px){
+
+    .form-card{
+        width: 400px;
+    }
+
+    .tasks-table{
+        width: 100%;
+       
+    }
+    .table-card{
+    
+    }
+
+    .section-card{
+        width: 100%;
+    }
+
+
+    /* Estilos des la cartas unicas */
+    .cards-container{  
+        padding: 1rem;
+        margin-bottom: 6rem;
+    }
+
+    .cards-perfil{
+       height: 600px;
+       width: 40%;
+        padding: .5rem;
+       
+    }
+
+    .cards-my-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .my-tasks{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 250px;
+        height: 200px;
+    }
+
+    .div-delete{
+        margin-bottom: 0;
+    }
+    
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0 0 0;
+    }
+
+    .card{
+        margin: 1rem;
+    }
+
+    .card-form{
+        margin-bottom: 8rem;
+    }
+
+    .f-content{
+        flex-direction: row;
+    }
+    .f-content a{
+        width: 50%;
+        margin: 1rem;
+    }
+
+    .footer-section{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+    }
+
+    .card-singup{
+        width: 400px;
+      }
+
+      /* Estilos des la cartas unicas */
+      .cards-content{
+        display: flex;
+        /* justify-content: space-between; */
+        justify-content: space-around;
+       
+    }
+}
+
+@media screen and (min-width: 900px){
+    .cards{
+        margin: 2rem 0 6rem;
+    }
+
+   .header {
+       position: sticky;
+       height: 3rem;
+       padding: .5rem;
+       height: calc(var(--herder-heiht) - 0.5rem);
+   }
+
+   .menu-btn{
+    display: none;
+  }
+
+  .title-container{
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    background: transparent;
+    justify-content: start;
+}
+
+  .menu{
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 0 1rem;
+  }
+
+   .menu a{
+       margin: 0 .3rem;
+    padding: 0 auto;
+  }
+
+/* Drop dawn menu */
+    .dropdawn-content-1{
+    top: 4rem;
+    left: 70%;
+    width: 200px;
+    }
+
+    .dropdawn-content-1 ul a{
+        margin: 5px auto;
+    }
+
+}
+
+
+
+/* Alert styles */
+.alert{
+    top: 0;
+    padding: .5rem;
+    width: 40%;
+    margin: 3px auto 0;
+    color: var(--white-color);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    
+}
+
+.alert-danger{
+    background: red;
+}
+
+.success-msg{
+    background: rgb(13, 177, 13);
+}
+
+.alert button {
+    margin-left: 2rem;
+    background: red;
+    color: var(--white-color);
+}
+
+
+
+.wellcome-msg{
+    width: 100%;
+    margin-bottom: 15rem;
+}
+
+
+
+
+/* Task Add Styles */
+
+/* .see-all-tasks{
+  
+    margin-bottom: 2rem;
+    text-align: center;
+} */
+
+/* .see-all-tasks a{
+    font-weight: bold;
+    padding: 1rem;
+    border: 1px solid var(--black-color);
+} */

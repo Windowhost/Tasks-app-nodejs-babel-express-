@@ -1,0 +1,61 @@
+{{!-- Codigo de la tabla la cuan renderizara los datos que se añaden --}}
+<div class="card-singup">
+
+    {{#if tasks}}
+        {{!-- Head section table--}}
+  <table class="tasks-table">
+        <thead class="card-header t-head">
+            <tr>
+                <th>N.</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Opetations</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{!-- looping the tasks --}}
+                {{#each tasks}}
+
+                    {{!-- foreach tasks create a table --}}
+                    <tr class="t-row">
+                        <td>{{@index}}</td> 
+
+                        {{!-- renderiza el title  descript dentro de del input corespondiente --}}
+                        <td class="t-title">{{title}}</td>
+                        <td class="t-desc">{{description}}</td>
+                        <td>    
+                        
+                        {{!-- Maneja la logica del boton Done --}}
+                        {{#if done}}
+                            <a href="/tasks/toggleDone/{{_id}}"  class="btn btn-success p-0">Done</a>
+                        {{else }} 
+                            <a href="/tasks/toggleDone/{{_id}}"  class="btn">Todo</a>
+
+                        {{/if}}
+                            <a href="/tasks/edit/{{_id}}"  class="btn">Update</a>
+                            <a href="/tasks/delete/{{_id}}" class="btn delete-btn">Delete</a>
+                        </td>
+                    </tr>
+
+                {{/each}}
+        </tbody>
+  </table>
+    
+    {{!-- display this code when there no tasks --}}
+    {{else}}
+        <div class="card-header text-center">
+            <div class="card-"> 
+                <h3>There is not Tasks</h3>
+                {{!-- <img src="/assets/task-icon.png" alt="icon" class="w-50"> --}}
+
+                <div class="">
+                    <a href="/tasks/add" class="btn  btn-success btn-block">Crea Una</a>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+
+</div>
+
+

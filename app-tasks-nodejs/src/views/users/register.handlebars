@@ -1,0 +1,31 @@
+{{!-- Register Section --}}
+<section class="home-container">
+    <div class="card-singup">
+        <div class="card-header">
+            <h3 class="text-center">Acount Register</h3>
+        </div>
+
+        <div class="cad-body">
+            <form class="contact-form" action="/users/register" method="POST">
+
+            <input type="text" name="username" placeholder="Your User Name"
+                title="El Nombre solo acepta Letras y espacion en blanco" pattern="^[A-Za-zÑñÄäÖöÜüÁáÉéÍíÓóÚú\s]+$"
+                required autofocus value="">
+
+            <input type="email" name="email" placeholder="Your Email" title="Email incorecto"
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required value="">
+
+            <input type="password" class="form-control" name="password" placeholder="Password" value="" >
+            
+            <input type="password" name="confirmPass" placeholder="Confirm Password" required >
+
+                {{!-- <div class="contact-form-loader none">
+                    <img src="./assets/rings.svg" alt="Loading...">
+                </div> --}}
+
+            <input type="submit" value="Singup">
+
+            </form>
+        </div>
+    </div>
+</section>
